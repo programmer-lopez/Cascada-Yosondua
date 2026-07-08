@@ -12,7 +12,7 @@ body {
     color: $texto;
 }
 .bienvenidos {
-    background: url("../images/fondo-encabezado.jpg") no-repeat center top;
+    background: url("../images/comunes/fondo-encabezado.jpg") no-repeat center top;
     color: #fff;
     background-size: cover;
     background-attachment: fixed !important;
@@ -190,7 +190,7 @@ SECCION SERVICIOS
 --------------------------------*/
 
 .servicios {
-    background: url("../images/fondo-servicios.jpg") no-repeat center center;
+    background: url("../images/comunes/fondo-servicios.jpg") no-repeat center center;
     background-size: cover;
     background-attachment: fixed !important;
     color: #fff;
@@ -463,7 +463,7 @@ EMPIEZAN LAS MEDIAS QUERIES
         font-size: 16px
     }
     .bienvenidos {
-        background: url("../images/fondo-encabezado-grande.jpg") no-repeat center top;
+        background: url("../images/comunes/fondo-encabezado-grande.jpg") no-repeat center top;
         background-size: cover
     }
     .tu-mejor-eleccion ul li {
@@ -498,7 +498,7 @@ EMPIEZAN LAS MEDIAS QUERIES
         width: 100%
     }
     .servicios {
-        background: url("../images/fondo-servicios-grande.jpg") no-repeat center center;
+        background: url("../images/comunes/fondo-servicios-grande.jpg") no-repeat center center;
         background-size: cover
     }
 }
