@@ -237,6 +237,35 @@
         </div>
     </main>
 
+    <!-- SECCIÓN DE CONTADORES -->
+    <section id="seccion-contadores" class="p-y-2 text-xs-center" style="background-color: #12AFAF; color: white;">
+        <div class="container">
+            <h2 class="h3 font-weight-bold mb-3" style="color: white; margin-bottom: 30px;">Nuestro Impacto</h2>
+            <div class="row">
+                <div class="col-sm-3 mb-3">
+                    <i class="fa fa-users fa-3x mb-1" style="color: #e0f2f1;"></i>
+                    <h2 class="contador-numero font-weight-bold" data-to="5000" data-speed="2000" style="font-size: 3rem;">0</h2>
+                    <p style="font-size: 1.1rem; color: #e0f2f1;">Visitantes Anuales</p>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <i class="fa fa-tree fa-3x mb-1" style="color: #e0f2f1;"></i>
+                    <h2 class="contador-numero font-weight-bold" data-to="150" data-speed="2000" style="font-size: 3rem;">0</h2>
+                    <p style="font-size: 1.1rem; color: #e0f2f1;">Hectáreas Protegidas</p>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <i class="fa fa-bed fa-3x mb-1" style="color: #e0f2f1;"></i>
+                    <h2 class="contador-numero font-weight-bold" data-to="20" data-speed="2000" style="font-size: 3rem;">0</h2>
+                    <p style="font-size: 1.1rem; color: #e0f2f1;">Cabañas Disponibles</p>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <i class="fa fa-camera fa-3x mb-1" style="color: #e0f2f1;"></i>
+                    <h2 class="contador-numero font-weight-bold" data-to="50" data-speed="2000" style="font-size: 3rem;">0</h2>
+                    <p style="font-size: 1.1rem; color: #e0f2f1;">Atracciones Naturales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
@@ -497,6 +526,11 @@
                 <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> </a></li>
             </ul>
 
+            <!-- Contador de Visitas -->
+            <div class="mt-2 text-xs-center" style="margin-top: 15px;">
+                <p style="margin-bottom: 5px; font-size: 0.9rem; color: #ccc;">Visitas totales a esta página:</p>
+                <img src="https://api.visitorbadge.io/api/visitors?path=cascadayosondua.index&label=Visitas&countColor=%2312AFAF" alt="Contador de visitas" />
+            </div>
         </div>
 
     </footer>
@@ -542,6 +576,47 @@
     <script src="js/wow.min.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/sitio.js"></script>
+
+    <!-- Script de Contadores Animados -->
+    <script>
+        // === CONFIGURACIÓN ===
+        // Cambia a 'false' para ocultar la sección completa del contador
+        const mostrarContadores = true; 
+
+        if (!mostrarContadores) {
+            document.getElementById('seccion-contadores').style.display = 'none';
+        } else {
+            $(document).ready(function() {
+                let contadoresIniciados = false;
+                $(window).scroll(function() {
+                    let seccion = $("#seccion-contadores");
+                    if (!seccion.length) return;
+                    
+                    let top_of_element = seccion.offset().top;
+                    let bottom_of_element = seccion.offset().top + seccion.outerHeight();
+                    let bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+                    let top_of_screen = $(window).scrollTop();
+
+                    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element) && !contadoresIniciados){
+                        $('.contador-numero').each(function () {
+                            var $this = $(this);
+                            jQuery({ Counter: 0 }).animate({ Counter: $this.attr('data-to') }, {
+                                duration: parseInt($this.attr('data-speed')),
+                                easing: 'swing',
+                                step: function () {
+                                    $this.text(Math.ceil(this.Counter));
+                                },
+                                complete: function() {
+                                    $this.text($this.attr('data-to'));
+                                }
+                            });
+                        });
+                        contadoresIniciados = true;
+                    }
+                });
+            });
+        }
+    </script>
 
 
 
