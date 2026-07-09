@@ -89,7 +89,10 @@
                 <div class="col-md-7 mb-4">
                     <div class="contact-card wow fadeInLeft">
                         <h2 class="mb-4 font-weight-bold" style="color: #12AFAF;">Envíanos un mensaje</h2>
-                        <form action="#">
+                        <form action="https://formsubmit.co/minium047@hotmail.com" method="POST">
+                            <!-- Opcional: Para evitar redirección de captcha y personalizar la página de éxito se pueden añadir inputs hidden aquí -->
+                            <input type="hidden" name="_subject" value="Nuevo mensaje desde la página web Cascada Yosondúa!">
+                            <input type="hidden" name="_template" value="table">
                             <div class="form-group row">
                                 <label for="nombre" class="col-md-12 col-form-label font-weight-bold">Nombre
                                     Completo</label>
@@ -121,8 +124,7 @@
                                 <div class="col-md-12 text-md-right text-center">
                                     <button type="reset" class="btn btn-secondary mr-2"
                                         style="border-radius: 30px; padding: 12px 25px;">Limpiar</button>
-                                    <button type="button" class="btn btn-premium-send"
-                                        onclick="parent.location='mailto:minium047@hotmail.com'">Enviar Mensaje <i
+                                    <button type="submit" class="btn btn-premium-send">Enviar Mensaje <i
                                             class="fa fa-paper-plane ml-2"></i></button>
                                 </div>
                             </div>
