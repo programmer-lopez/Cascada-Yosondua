@@ -40,6 +40,11 @@
         "carpeta":  "paisajes",
         "titulo":  "PAISAJES",
         "imagenes":  [
+                         "DSC00176.JPG",
+                         "DSC00179.JPG",
+                         "DSC00191.JPG",
+                         "DSC00192.JPG",
+                         "DSC00199.JPG",
                          "DSC02709.jpg",
                          "DSC02752.jpg",
                          "DSC02774.jpg",
