@@ -158,7 +158,7 @@ SECCION AGENCIA
     display: block;
 }
 /*----------------------------
-SECCION TU MEJOR ELECCIÓN
+SECCION TU MEJOR ELECCIÃ“N
 ----------------------------*/
 
 .tu-mejor-eleccion h2 span {
@@ -233,7 +233,7 @@ SECCION SERVICIOS
     color: $principal;
 }
 /*---------------------------------
-SECCION ÚLTIMOS PROYECTOS
+SECCION ÃšLTIMOS PROYECTOS
 ------------------------------------*/
 
 .ultimos-proyectos a {
@@ -501,4 +501,22 @@ EMPIEZAN LAS MEDIAS QUERIES
         background: url("../images/comunes/fondo-servicios-grande.jpg") no-repeat center center;
         background-size: cover
     }
+}
+
+/* Media Queries for Responsive Hero */
+@media (max-width: 1200px) {
+  .bienvenidos {
+    background-attachment: scroll !important;
+    background-position: center center;
+  }
+  .texto-encabezado .display-4 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-top: 2rem;
+  }
+  .texto-encabezado h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .texto-encabezado p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
 }

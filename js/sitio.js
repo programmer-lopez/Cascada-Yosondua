@@ -41,3 +41,20 @@ $(window).scroll(function () {
         nav.removeClass("fondo-menu");
     }
 });
+
+/*---------------------------------
+   INTERACCIÓN DEL BUSCADOR
+ ----------------------------------*/
+$(function() {
+    $('#bloque-buscar').on('submit', function(e) {
+        e.preventDefault();
+        var query = $(this).find('input[type="text"]').val();
+        if (query.trim() !== '') {
+            alert('Realizando búsqueda de: ' + query + '\n\n(Funcionalidad demostrativa)');
+            $(this).collapse('hide');
+            $(this).find('input[type="text"]').val('');
+        } else {
+            alert('Por favor ingresa un término para buscar.');
+        }
+    });
+});
