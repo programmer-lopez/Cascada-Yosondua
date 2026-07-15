@@ -4,7 +4,8 @@
         "nombre":  "Escuelas",
         "carpeta":  "escuelas",
         "imagenes":  [
-
+                         "CIS 20 Santiago Yosondúa b.jpg",
+                         "cobaomaxresdefault.jpg"
                      ]
     },
     {
@@ -12,6 +13,7 @@
         "nombre":  "Eventos",
         "carpeta":  "eventos",
         "imagenes":  [
+                         "maxres2.jpg",
                          "viacrucis.jpg",
                          "viacrucis10.jpg",
                          "viacrucis11.jpg",
@@ -40,7 +42,9 @@
         "nombre":  "Municipio",
         "carpeta":  "municipio",
         "imagenes":  [
-
+                         "municipioyosondua325434626454.jpg",
+                         "municipioyosondua325464326454.jpg",
+                         "municipioyosondua3254645654.jpg"
                      ]
     },
     {
@@ -48,7 +52,7 @@
         "nombre":  "Plaza",
         "carpeta":  "plaza",
         "imagenes":  [
-
+                         "img-o-32423-yosondua-tu-tienda-artesanal.jpg"
                      ]
     },
     {
